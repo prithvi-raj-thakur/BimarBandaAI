@@ -10,6 +10,7 @@ import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import { useState, useEffect } from "react";
 import HelpChatbot from './components/HelpChatbot';
+import Chatbot from './components/Chatbot';
 
 
 
@@ -52,7 +53,7 @@ function App() {
 
           {/* Chat Panel */}
           <div className="relative z-50 w-full h-full md:max-w-3xl md:h-[90vh] md:rounded-2xl bg-white shadow-2xl border border-gray-200 overflow-hidden mx-4 my-6">
-            <HelpChatbot onClose={() => setOpenChat(false)} />
+            <Chatbot onClose={() => setOpenChat(false)} />
           </div>
         </div>
       )}
