@@ -4,11 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "backend": "python ../backend/chatbot.py",
-    "start": "concurrently \"npm run dev\" \"npm run backend\"",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+
+  "backend": "python ../backend/chatbot.py",
+
+  "start": "concurrently \"npm run dev\" \"npm run backend\""
+},
+
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@radix-ui/react-progress": "^1.1.8",
