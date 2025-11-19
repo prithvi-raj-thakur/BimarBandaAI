@@ -3,7 +3,7 @@ services:
     name: bimar-banda-backend
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app --preload --workers 1 --bind 0.0.0.0:10000"
+    startCommand: "gunicorn main:app --preload --workers 1 --bind 0.0.0.0:10000"
     envVars:
       - key: GOOGLE_API_KEY
         sync: false
