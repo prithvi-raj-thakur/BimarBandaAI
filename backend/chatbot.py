@@ -631,6 +631,6 @@ def home():
 # Run server
 # ---------------------------------------------------------
 if __name__ == "__main__":
-    # Use a production WSGI server in production; debug True is okay locally.
-    print("Starting backend…")
-    app.run(port=5000, debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Render will inject PORT
+    print(f"Starting backend on port {port}…")
+    app.run(host="0.0.0.0", port=port)
